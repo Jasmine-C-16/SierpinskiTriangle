@@ -11,11 +11,11 @@ public void draw(){
 //}
 public void sierpinski(int x, int y, int len) {
 	fill(225);
-	if (len<=20)
-		triangle(x,y,x+len,y,x,y+len);
+	if (len<=30)
+		triangle(x,y,x+(len/2),y+(len),x+len,y);
 	else {
 		sierpinski(x,y,len/2);
-		sierpinski(x+50,y,len/2);
+		sierpinski(x+(len/2),y,len/2);
 		sierpinski(x+(len/4),y+(len/2),len/2);
 	}
 }
